@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Fajar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Profil" />
+        <h1>Fajar Affandi</h1>
+    </header>
+    
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showContent('biodata')">Biodata</a></li>
+                <li><a href="#" onclick="showContent('pendidikan')">Pendidikan</a></li>
+                <li><a href="#" onclick="showContent('pengalaman')">Pengalaman</a></li>
+                <li><a href="#" onclick="showContent('keahlian')">Keahlian</a></li>
+                <li><a href="#" onclick="showContent('publikasi')">Publikasi</a></li>
+            </ul>
+        </nav>
+        
+        <section id="content">
+            <div id="biodata">
+                <h2>Biodata</h2>
+                <p>NIM: 2023081017</p>
+                <p>Nama: Fajar Affandi</p>
+                <p>Agama: Islam</p>
+                <p>Tanggal Lahir: 17 Februari 2005</p>
+                <p>Tempat Lahir: Tangerang </p>
+            </div>
+            <div id="pendidikan" style="display: none;">
+                <h2>Pendidikan</h2>
+                <p><strong>2023 - Sekarang | Universitas Pembangunan Jaya | Program Studi Sistem informasi</strong></p>
+                <hr style="border: 1px solid black;">
+                <p>Sistem Informasi memberikan saya kesempatan untuk mempelajari bagaimana mengelola data dan merancang sistem.
+                    </p>
+                    &nbsp;&nbsp;&nbsp;
+                    <p><strong>2020 - 2023 | SMAN 11 TANGERANG SELATAN  | Jurusan IPS</strong></p>
+                    <hr style="border: 1px solid black;">
+                    <p> Saya tertarik untuk mengembangkan kemampuan berpikir kritis dan analitis dalam menganalisis fenomena sosial dan isu-isu global.</p>
+                    &nbsp;&nbsp;&nbsp;
+                    <p><strong>2017 - 2020 | MTs Soebono Mantofani</strong></p>
+            </div>
+            <div id="pengalaman" style="display: none;">
+                <h2>Pengalaman</h2>
+                <p><strong>2024 (Agustus) |Divisi Keamanan PRIMA 2024| Universitas Pembangunan Jaya</strong></p>
+                <hr style="border: 1px solid black;">
+               <p> Bekerja sama dengan tim untuk menertibkan mahasiswa baru dengan peraturan tertulis maupun tidak tertulis</p>
+                &nbsp;&nbsp;&nbsp;
+                <p><strong>2024 (Mei) |Divisi Keamanan GIDHUB 2024| Universitas Pembangunan Pembangunan Jaya</strong></p>
+                <hr style="border: 1px solid black;">
+                <P> Mengamankan selama acara berlangsung agar tidak terjadi tindakan yang tidak diinginkan</P>
+            </div>
+            <div id="keahlian" style="display: none;">
+                <h2>Keahlian</h2>
+                <p>Dapat berkomunikasi baik.</p>
+                <p>Dapat bekerjasama dengan tim.</p>
+            </div>
+            <div id="publikasi" style="display: none;">
+                <h2>Publikasi</h2>
+                <p>Video tugas membuat repository github</p>
+                <p>Membuat jurnal tentang "Konsep Sistem Informasi di Bidang Bisnis"</p>
+            </div>
+        </section>
+        
+        <aside>
+            <h2>Hobi</h2>
+            <p>Futsal</p>
+            <p>Bermain Gitar</p>
+            <p>Sepak Bola</p>
+           
+        </aside>
+    </main>
+    
+    <footer>
+        <div class="left">
+            <p>Email : fajaraffandi117@gmail.com</p>
+            <p>Tiktok : @littleamigoooo</p>
+            <p>Instagram: @fajaraffandii</p>
+        </div>
+        <div class="center">
+            <p>&copy; Copyright 2024. PUNYA FAJAR</p>
+        </div>
+        <div class="right">
+            <p>Profil Fajar </p>
+            <p>PIBS</p>
+        </div>
+    </footer>
+
+    <script>
+        function showContent(contentId) {
+            const sections = document.querySelectorAll('section > div');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

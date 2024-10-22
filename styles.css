@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mengubah font */
+}
+
+header, nav, section, aside, footer {
+  padding: 10px;
+  border: none; /* Menghapus border default */
+}
+
+header {
+  background: linear-gradient(to right, #2e8b57, #b2e0d4); /* Gradient hijau ke turquoise */
+  display: flex;
+  align-items: center; /* Meratakan gambar dan teks di tengah */
+  justify-content: flex-start;
+  color: white; /* Warna teks putih untuk kontras */
+}
+
+header img {
+  height: 80px; /* Ukuran gambar yang lebih kecil */
+  width: auto;
+  border-radius: 50%; /* Membuat gambar profil melingkar */
+  margin-right: 15px; /* Jarak antara gambar dan teks */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan pada gambar */
+}
+
+header h1 {
+  font-size: 28px; /* Ukuran font lebih besar */
+  margin-top: 5px;
+}
+
+nav {
+  width: 25%;
+  background-color: #d1e7dd; /* Warna pastel hijau muda */
+  color: #333; /* Warna teks gelap untuk kontras */
+  padding: 15px; /* Jarak dalam navbar */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan ke nav */
+}
+
+nav ul {
+  list-style-type: none; /* Menghilangkan bullet pada list */
+  padding: 0; /* Menghilangkan padding */
+}
+
+nav ul li {
+  margin: 15px 0; /* Jarak antar item navbar */
+}
+
+nav ul li a {
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  color: #333; /* Warna teks link gelap */
+  font-weight: bold; /* Membuat teks lebih tebal */
+  padding: 10px 15px; /* Jarak dalam link */
+  display: block; /* Membuat seluruh area link bisa diklik */
+  border-radius: 5px; /* Membuat sudut link membulat */
+  transition: background-color 0.3s, transform 0.2s; /* Transisi untuk efek hover */
+}
+
+nav ul li a:hover {
+  background-color: #a5d6a7; /* Warna latar belakang saat hover */
+  color: #333; /* Warna teks saat hover */
+  transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+nav ul li a.active {
+  background-color: #ffd54f; /* Warna untuk link yang aktif */
+  color: #333; /* Warna teks aktif */
+}
+
+section {
+  width: 50%;
+  padding: 20px;
+  background-color: #fff3e0; /* Latar belakang konten pastel krem */
+  border-left: 1px solid #ccc; /* Border kiri */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan pada konten */
+}
+
+aside {
+  width: 25%;
+  padding: 15px;
+  background-color: #b2dfdb; /* Sama dengan warna nav pastel hijau muda */
+  color: #333; /* Pastikan teks berwarna gelap agar kontras */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan ke aside */
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+footer {
+  background: linear-gradient(to right, #2e8b57, #b2e0d4); /* Gradient hijau ke turquoise */
+  color: white; /* Warna teks putih */
+  display: flex;
+  justify-content: space-between;
+  padding: 15px; /* Jarak dalam footer */
+  align-items: center;
+}
+
+footer .left {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* Menyusun elemen secara vertikal */
+}
+
+footer .center, footer .right {
+  flex: 1;
+  text-align: center;
+}
+
+footer .right {
+  text-align: right;
+}
+
+footer .social {
+  font-size: 16px; /* Ukuran teks sosial media lebih besar */
+}
+
+@media (max-width: 768px) {
+  nav {
+    width: 25%;
+  }
+
+  section {
+    width: 75%;
+  }
+
+  aside {
+    width: 100%;
+    display: block;
+  }
+
+  main {
+    flex-wrap: wrap;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  footer .center, footer .right {
+    text-align: left;
+  }
+
+  footer .center {
+    margin-top: 10px;
+  }
+
+  footer .right {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav, section, aside {
+    width: 100%;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header img {
+    margin-bottom: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .left, footer .center, footer .right {
+    text-align: center;
+    width: 100%;
+  }
+
+  footer .center, footer .right {
+    margin-top: 10px;
+  }
+}
